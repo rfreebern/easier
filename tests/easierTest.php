@@ -1,8 +1,8 @@
 <?php
 
-namespace Easier;
+namespace rfreebern;
 
-include_once('lib/easier.php');
+include_once('src/rfreebern/Easier/Easier.php');
 
 class EasierTest extends \PHPUnit_Framework_TestCase {
 
@@ -45,7 +45,7 @@ class EasierTest extends \PHPUnit_Framework_TestCase {
     public function testInstantiate () {
 
         $easier = new Easier();
-        $this->assertInstanceOf('Easier\Easier', $easier);
+        $this->assertInstanceOf('rfreebern\Easier', $easier);
 
     }
 
