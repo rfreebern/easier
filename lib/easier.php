@@ -1,6 +1,6 @@
 <?php
 
-namespace Easier;
+namespace rfreebern;
 
 class Easier {
 
