@@ -64,7 +64,7 @@ class Easier {
 
     private static function decode ($input) {
         if (!self::valid($input)) {
-            throw new \InvalidArgumentException('Input must be a valid EASIER code.');
+            throw new \InvalidArgumentException('Input must be a valid easier code.');
         }
 
         $digitString = implode('', self::$Digits);

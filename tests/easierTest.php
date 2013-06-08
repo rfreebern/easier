@@ -2,7 +2,7 @@
 
 namespace Easier;
 
-include_once('lib/Easier.php');
+include_once('lib/easier.php');
 
 class EasierTest extends \PHPUnit_Framework_TestCase {
 
@@ -31,7 +31,7 @@ class EasierTest extends \PHPUnit_Framework_TestCase {
         try {
             Easier::decode('abc-+!');
         } catch (\InvalidArgumentException $e) {
-            $this->assertEquals($e->getMessage(), 'Input must be a valid EASIER code.');
+            $this->assertEquals($e->getMessage(), 'Input must be a valid easier code.');
         }
 
         try {
