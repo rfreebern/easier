@@ -7,6 +7,9 @@ The goal of Easier is to simplify transmitting data between humans and computers
 
 Easier enables confidently sharing strings even in media where print quality or font choice may render some glyphs difficult to decipher. Easier-encoded strings are particularly useful in shortened URLs destined to be shared in print, written by hand, or glimpsed in passing.
 
+## Installation
+If you use [Packagist](http://packagist.org), add `rfreebern/easier` to the "requirements" section of your `composer.json` and run `composer.phar update`.
+
 ## Usage
 Include the library:
 `use rfreebern\Easier as Easier;`
