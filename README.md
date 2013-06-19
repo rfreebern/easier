@@ -27,5 +27,5 @@ Easier can also be used in object context:
 Easier has a full PHPUnit test suite. Simply run `phpunit .` in the Easier root directory.
 
 ## Similar Projects
-http://www.crockford.com/wrmg/base32.html
-http://tantek.pbworks.com/w/page/19402946/NewBase60
+* [Douglas Crockford's Base 32](http://www.crockford.com/wrmg/base32.html)
+* [Tantek Çelik's New Base 60](http://tantek.pbworks.com/w/page/19402946/NewBase60)
