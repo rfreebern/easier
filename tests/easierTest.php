@@ -2,7 +2,7 @@
 
 namespace rfreebern;
 
-include_once('src/rfreebern/Easier/Easier.php');
+include_once('src/rfreebern/Easier.php');
 
 class EasierTest extends \PHPUnit_Framework_TestCase {
 
