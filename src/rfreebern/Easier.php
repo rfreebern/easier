@@ -6,18 +6,18 @@ class Easier {
 
     private static $Digits = array(
         '0','1','2','3','4','5','6','7','8','9',
-        'a','c','d','e','f','h','j','k','m','n',
-        'p','r','t','v','w','x','y'
+        'A','C','D','E','F','H','J','K','M','N',
+        'P','R','T','V','W','X','Y'
     );
 
     private static $Disambiguate = array(
-        'o' => '0', 'q' => '0',
-        'i' => '1', 'l' => '1',
-        'z' => '2',
-        's' => '5',
-        'g' => '6',
-        'b' => '8',
-        'u' => 'v'
+        'O' => '0', 'Q' => '0',
+        'I' => '1', 'L' => '1',
+        'Z' => '2',
+        'S' => '5',
+        'G' => '6',
+        'B' => '8',
+        'U' => 'V'
     );
 
     protected $Input;
@@ -45,7 +45,7 @@ class Easier {
         $digitString = implode('', self::$Digits);
         $disambiguateKeyString = implode('', array_keys(self::$Disambiguate));
         $exp = '/^[' . $digitString . $disambiguateKeyString . ']*$/';
-        return preg_match($exp, strtolower($input)) === 1;
+        return preg_match($exp, strtoupper($input)) === 1;
     }
 
     private static function encode ($input) {
@@ -72,7 +72,7 @@ class Easier {
         $disambiguateKeys = array_keys(self::$Disambiguate);
         $disambiguateVals = array_values(self::$Disambiguate);
 
-        $input = str_replace($disambiguateKeys, $disambiguateVals, strtolower($input));
+        $input = str_replace($disambiguateKeys, $disambiguateVals, strtoupper($input));
         
         $decoded = 0;
         for ($i = 0; $i < strlen($input); $i++) {

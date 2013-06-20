@@ -9,8 +9,8 @@ class EasierTest extends \PHPUnit_Framework_TestCase {
     public function testStaticEncode () {
 
         $this->assertEquals(Easier::encode(0), '');
-        $this->assertEquals(Easier::encode('12'), 'd');
-        $this->assertEquals(Easier::encode(123456789), 'mv68j8');
+        $this->assertEquals(Easier::encode('12'), 'D');
+        $this->assertEquals(Easier::encode(123456789), 'MV68J8');
 
     }
 
@@ -18,10 +18,10 @@ class EasierTest extends \PHPUnit_Framework_TestCase {
 
         $this->assertEquals(Easier::decode(''), '0');
         $this->assertEquals(Easier::decode('d'), '12');
-        $this->assertEquals(Easier::decode('mv68j8'), 123456789);
-        $this->assertEquals(Easier::decode('mvG8j8'), 123456789);
-        $this->assertEquals(Easier::decode('mv6bj8'), 123456789);
-        $this->assertEquals(Easier::decode('mv68jB'), 123456789);
+        $this->assertEquals(Easier::decode('Mv68J8'), 123456789);
+        $this->assertEquals(Easier::decode('mvG8J8'), 123456789);
+        $this->assertEquals(Easier::decode('mV6bj8'), 123456789);
+        $this->assertEquals(Easier::decode('MV68Jb'), 123456789);
         $this->assertEquals(Easier::decode('mUgbjB'), 123456789);
 
     }
@@ -52,8 +52,8 @@ class EasierTest extends \PHPUnit_Framework_TestCase {
     public function testObjectEncode () {
 
         $easier = new Easier(123456789);
-        $this->assertEquals($easier->encode(), 'mv68j8');
-        $this->assertEquals($easier->encode('8675309'), 'p7p8j');
+        $this->assertEquals($easier->encode(), 'MV68J8');
+        $this->assertEquals($easier->encode('8675309'), 'P7P8J');
 
     }
 
